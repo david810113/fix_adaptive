@@ -70,38 +70,38 @@ input [13:0] buffer_in_30;
 input [13:0] buffer_in_31;
 input [13:0] buffer_in_32;
 
-input [31:0] weight_in_0;
-input [31:0] weight_in_1;
-input [31:0] weight_in_2;
-input [31:0] weight_in_3;
-input [31:0] weight_in_4;
-input [31:0] weight_in_5;
-input [31:0] weight_in_6;
-input [31:0] weight_in_7;
-input [31:0] weight_in_8;
-input [31:0] weight_in_9;
-input [31:0] weight_in_10;
-input [31:0] weight_in_11;
-input [31:0] weight_in_12;
-input [31:0] weight_in_13;
-input [31:0] weight_in_14;
-input [31:0] weight_in_15;
-input [31:0] weight_in_16;
-input [31:0] weight_in_17;
-input [31:0] weight_in_18;
-input [31:0] weight_in_19;
-input [31:0] weight_in_20;
-input [31:0] weight_in_21;
-input [31:0] weight_in_22;
-input [31:0] weight_in_23;
-input [31:0] weight_in_24;
-input [31:0] weight_in_25;
-input [31:0] weight_in_26;
-input [31:0] weight_in_27;
-input [31:0] weight_in_28;
-input [31:0] weight_in_29;
-input [31:0] weight_in_30;
-input [31:0] weight_in_31;
+input [15:0] weight_in_0;
+input [15:0] weight_in_1;
+input [15:0] weight_in_2;
+input [15:0] weight_in_3;
+input [15:0] weight_in_4;
+input [15:0] weight_in_5;
+input [15:0] weight_in_6;
+input [15:0] weight_in_7;
+input [15:0] weight_in_8;
+input [15:0] weight_in_9;
+input [15:0] weight_in_10;
+input [15:0] weight_in_11;
+input [15:0] weight_in_12;
+input [15:0] weight_in_13;
+input [15:0] weight_in_14;
+input [15:0] weight_in_15;
+input [15:0] weight_in_16;
+input [15:0] weight_in_17;
+input [15:0] weight_in_18;
+input [15:0] weight_in_19;
+input [15:0] weight_in_20;
+input [15:0] weight_in_21;
+input [15:0] weight_in_22;
+input [15:0] weight_in_23;
+input [15:0] weight_in_24;
+input [15:0] weight_in_25;
+input [15:0] weight_in_26;
+input [15:0] weight_in_27;
+input [15:0] weight_in_28;
+input [15:0] weight_in_29;
+input [15:0] weight_in_30;
+input [15:0] weight_in_31;
 
 output [31:0] n;
 output reg [13:0] e;   
@@ -213,7 +213,7 @@ reg [13:0] reff;
 		endcase
 	end	
 			
-reg [31:0] weight_in;	
+reg [15:0] weight_in;	
 	always@(posedge clk or negedge rstn)
 	begin
 	if (rstn == 0)
@@ -257,7 +257,7 @@ reg [31:0] weight_in;
 	end		
 
 //********************** DSP ***********************//
-reg [46:0] multiple;
+reg [32:0] multiple;
 reg [31:0] nref;
 reg [31:0] n;
 reg [63:0] d_sum;
@@ -277,11 +277,11 @@ reg adap_filter_state_dly;
 always@(posedge clk or negedge rstn)
 begin
 if (rstn == 0)
-	multiple <=   47'd0;
+	multiple <=   32'd0;
 else if (adap_filter_state_dly == 1'b0)
-	multiple <=   47'd0;
+	multiple <=   32'd0;
 else if (counter<6'd34)
-	multiple <=  { {15{weight_in[31]}}, weight_in} * {{33{reff[13]}}, reff};
+	multiple <=  { {16{weight_in[15]}}, weight_in} * {{18{reff[13]}}, reff};
 else
 	multiple <=    multiple;
 end
@@ -294,7 +294,7 @@ begin
 if (rstn == 0)
 	dreg <=   64'd0;
 else if (adap_filter_state_dly == 1'b1 && counter<6'd34)
-	dreg <=   dreg +{{18{multiple[46]}},multiple};
+	dreg <=   dreg +{{32{multiple[31]}},multiple};
 else if (adap_filter_state_dly == 1'b0)
 	dreg <=   64'd0;
 else
@@ -309,7 +309,7 @@ if (rstn == 0)
 else if (adap_filter_state_dly == 1'b0)
 	nref <=   32'd0;
 else if (counter<6'd34)
-	nref <=  {{17{reff[13]}}, reff}* {{17{reff[13]}}, reff};
+	nref <=  {{18{reff[13]}}, reff}* {{18{reff[13]}}, reff};
 else
 	nref <=   nref;
 end
@@ -347,24 +347,13 @@ if(rstn==0)
 	d_sum <= 64'd0;	
 
 else if (flag_15==1&&flag_n==1)
-	d_sum <=   dreg +{{18{multiple[46]}},multiple};
+	d_sum <=   dreg +{{32{multiple[31]}},multiple};
 else
 	d_sum <=  d_sum;
 end
-/*
-always@(posedge clk or negedge rstn)
-begin	
-if(rstn==0)
-	d <= 14'd0;	
 
-else if (d_sum[31]==1&& ~d_sum<12'd1024)
-	d <=   14'b0;
-else if (d_sum[31]==1)
-	d <= d_sum[24:10]+1'b1;
-else
-	d <=  d_sum[24:10];
-end
-*/
+
+
 assign d = (d_sum[31]==1&& ~d_sum<12'd1024)?14'd0:(d_sum[31]==1)?d_sum[24:10]+1'b1:d_sum[24:10];
 
 
@@ -372,7 +361,7 @@ always@(posedge clk or negedge rstn)
 begin
 if (rstn == 0)
 	e <=   14'd0;
-else if (div_state == 1'b1)
+else if (adap_filter_state == 1'b0)
 	e <=   buffer_in_32 - d;	
 
 else

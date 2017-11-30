@@ -76,71 +76,71 @@ wire [13:0] buffer_3_in_30;
 wire [13:0] buffer_3_in_31;
 wire [13:0] buffer_3_in_32;
 
-wire [31:0] weight_2_in_0;
-wire [31:0] weight_2_in_1;
-wire [31:0] weight_2_in_2;
-wire [31:0] weight_2_in_3;
-wire [31:0] weight_2_in_4;
-wire [31:0] weight_2_in_5;
-wire [31:0] weight_2_in_6;
-wire [31:0] weight_2_in_7;
-wire [31:0] weight_2_in_8;
-wire [31:0] weight_2_in_9;
-wire [31:0] weight_2_in_10;
-wire [31:0] weight_2_in_11;
-wire [31:0] weight_2_in_12;
-wire [31:0] weight_2_in_13;
-wire [31:0] weight_2_in_14;
-wire [31:0] weight_2_in_15;
-wire [31:0] weight_2_in_16;
-wire [31:0] weight_2_in_17;
-wire [31:0] weight_2_in_18;
-wire [31:0] weight_2_in_19;
-wire [31:0] weight_2_in_20;
-wire [31:0] weight_2_in_21;
-wire [31:0] weight_2_in_22;
-wire [31:0] weight_2_in_23;
-wire [31:0] weight_2_in_24;
-wire [31:0] weight_2_in_25;
-wire [31:0] weight_2_in_26;
-wire [31:0] weight_2_in_27;
-wire [31:0] weight_2_in_28;
-wire [31:0] weight_2_in_29;
-wire [31:0] weight_2_in_30;
-wire [31:0] weight_2_in_31;
+wire [15:0] weight_2_in_0;
+wire [15:0] weight_2_in_1;
+wire [15:0] weight_2_in_2;
+wire [15:0] weight_2_in_3;
+wire [15:0] weight_2_in_4;
+wire [15:0] weight_2_in_5;
+wire [15:0] weight_2_in_6;
+wire [15:0] weight_2_in_7;
+wire [15:0] weight_2_in_8;
+wire [15:0] weight_2_in_9;
+wire [15:0] weight_2_in_10;
+wire [15:0] weight_2_in_11;
+wire [15:0] weight_2_in_12;
+wire [15:0] weight_2_in_13;
+wire [15:0] weight_2_in_14;
+wire [15:0] weight_2_in_15;
+wire [15:0] weight_2_in_16;
+wire [15:0] weight_2_in_17;
+wire [15:0] weight_2_in_18;
+wire [15:0] weight_2_in_19;
+wire [15:0] weight_2_in_20;
+wire [15:0] weight_2_in_21;
+wire [15:0] weight_2_in_22;
+wire [15:0] weight_2_in_23;
+wire [15:0] weight_2_in_24;
+wire [15:0] weight_2_in_25;
+wire [15:0] weight_2_in_26;
+wire [15:0] weight_2_in_27;
+wire [15:0] weight_2_in_28;
+wire [15:0] weight_2_in_29;
+wire [15:0] weight_2_in_30;
+wire [15:0] weight_2_in_31;
 
-wire [31:0] weight_3_in_0;
-wire [31:0] weight_3_in_1;
-wire [31:0] weight_3_in_2;
-wire [31:0] weight_3_in_3;
-wire [31:0] weight_3_in_4;
-wire [31:0] weight_3_in_5;
-wire [31:0] weight_3_in_6;
-wire [31:0] weight_3_in_7;
-wire [31:0] weight_3_in_8;
-wire [31:0] weight_3_in_9;
-wire [31:0] weight_3_in_10;
-wire [31:0] weight_3_in_11;
-wire [31:0] weight_3_in_12;
-wire [31:0] weight_3_in_13;
-wire [31:0] weight_3_in_14;
-wire [31:0] weight_3_in_15;
-wire [31:0] weight_3_in_16;
-wire [31:0] weight_3_in_17;
-wire [31:0] weight_3_in_18;
-wire [31:0] weight_3_in_19;
-wire [31:0] weight_3_in_20;
-wire [31:0] weight_3_in_21;
-wire [31:0] weight_3_in_22;
-wire [31:0] weight_3_in_23;
-wire [31:0] weight_3_in_24;
-wire [31:0] weight_3_in_25;
-wire [31:0] weight_3_in_26;
-wire [31:0] weight_3_in_27;
-wire [31:0] weight_3_in_28;
-wire [31:0] weight_3_in_29;
-wire [31:0] weight_3_in_30;
-wire [31:0] weight_3_in_31;
+wire [15:0] weight_3_in_0;
+wire [15:0] weight_3_in_1;
+wire [15:0] weight_3_in_2;
+wire [15:0] weight_3_in_3;
+wire [15:0] weight_3_in_4;
+wire [15:0] weight_3_in_5;
+wire [15:0] weight_3_in_6;
+wire [15:0] weight_3_in_7;
+wire [15:0] weight_3_in_8;
+wire [15:0] weight_3_in_9;
+wire [15:0] weight_3_in_10;
+wire [15:0] weight_3_in_11;
+wire [15:0] weight_3_in_12;
+wire [15:0] weight_3_in_13;
+wire [15:0] weight_3_in_14;
+wire [15:0] weight_3_in_15;
+wire [15:0] weight_3_in_16;
+wire [15:0] weight_3_in_17;
+wire [15:0] weight_3_in_18;
+wire [15:0] weight_3_in_19;
+wire [15:0] weight_3_in_20;
+wire [15:0] weight_3_in_21;
+wire [15:0] weight_3_in_22;
+wire [15:0] weight_3_in_23;
+wire [15:0] weight_3_in_24;
+wire [15:0] weight_3_in_25;
+wire [15:0] weight_3_in_26;
+wire [15:0] weight_3_in_27;
+wire [15:0] weight_3_in_28;
+wire [15:0] weight_3_in_29;
+wire [15:0] weight_3_in_30;
+wire [15:0] weight_3_in_31;
 
 wire [13:0] reff_0;
 wire [13:0] reff_1;
@@ -186,9 +186,9 @@ reg stop_state, stb_state, adap_filter_state, weight_cal_state, shift_data_state
     always @(posedge clk or negedge rstn)
     begin
         if (rstn == 0)
-             {stb_state, shift_data_state, weight_cal_state,div_state, adap_filter_state, stop_state} <=   6'd0;
+             {stb_state, shift_data_state,div_state, weight_cal_state, adap_filter_state, stop_state} <=   6'd0;
    	else
-		{stb_state, shift_data_state, weight_cal_state, div_state, adap_filter_state, stop_state} <=   curr_state;
+		{stb_state, shift_data_state,div_state, weight_cal_state, adap_filter_state, stop_state} <=   curr_state;
     end
 
 /*
@@ -238,11 +238,11 @@ assign shift_data_state = curr_state[3];
            		     else        next_state = 6'd1;
     6'd2      : if (counter == 12'd32) next_state = 6'd4;
             		     else        next_state = 6'd2;
-    6'd4      : if (counter == 12'd1032) next_state = 6'd8;
+    6'd4      : if (counter == 12'd65) next_state = 6'd8;
               		     else        next_state = 6'd4;				
-    6'd8      : if (counter == 12'd1092) next_state = 6'd16;
+    6'd8      : if (counter == 12'd1065) next_state = 6'd16;
               		     else        next_state = 6'd8;
-    6'd16      : if (counter == 12'd1093) next_state = 6'd32;
+    6'd16      : if (counter == 12'd1066) next_state = 6'd32;
               		     else 	 next_state = 6'd16;
     6'd32     : if (~head_flag)		next_state = 6'd1;
               		     else     	next_state = 6'd32;
@@ -481,6 +481,7 @@ adaptive_filter adaptive_filter_3 (
 
 ram_weight ram_weight_2 (.counter(counter),
 			.weight_cal_state(weight_cal_state),
+			.div_state(div_state),
 			.rstn(rstn),
 			.clk(clk),
 			.e(e_2),
@@ -552,6 +553,7 @@ ram_weight ram_weight_2 (.counter(counter),
 );
 ram_weight ram_weight_3 (.counter(counter),
 			.weight_cal_state(weight_cal_state),
+			.div_state(div_state),
 			.rstn(rstn),
 			.clk(clk),
 			.e(e_3),
